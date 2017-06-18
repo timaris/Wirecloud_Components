@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT - changed by timaris" name="ckan-source changed by timaris" version="0.4.4">
+  <details>
+    <title>CKAN Source</title>
+    <authors>Aitor Magán García modified by timaris</authors>
+    <email>amagan@conwet.com</email>
+    <image>images/ckan.png</image>
+    <description>An operator to retrieve data from a CKAN dataset</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <homepage>https://github.com/wirecloud-fiware/ckan-source-operator</homepage>
+    <license>Apache License 2.0</license>
+    <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
+    <doc>doc/index.md</doc>
+    <changelog>doc/changelog.md</changelog>
+  </details>
+  <preferences>
+      <preference name="ckan_server" type="text" description="CKAN Server URL" label="CKAN Server URL" default="https://data.lab.fiware.org"/>
+      <preference name="auth_token" type="text" label="CKAN Authorization Token" description="CKAN Authorization Token. If empty, this operator will use the IdM credentials of the current user (only available for users logged through the IdM server, so will not work for anoymous users/public workspaces)"/>
+      <preference name="resource" type="text" description="Every dataset has some resources" label="Resource ID"/>
+      <preference name="limit_rows" type="text" description="Maximum number of rows to return. 0 or empty to use the default configuration from the CKAN server" label="Number of rows to retrieve (resources)" default="100"/>
+  </preferences>
+  <wiring>
+      <outputendpoint name="resource" type="text" label="Resource" description="The resource (a JSON including the structure and the data)" friendcode="dataset"/>
+  </wiring>
+  <scripts>
+    <script src="js/main.js"/>
+  </scripts>
+</operator>
