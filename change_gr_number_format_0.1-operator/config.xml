@@ -7,7 +7,7 @@
     <image>images/grnumber.png</image>
     <description>An operator to change the format of greek-format numbers</description>
     <longdescription>DESCRIPTION.md</longdescription>
-    <homepage>https://github.com/wirecloud-fiware/</homepage>
+    <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/change_gr_number_format_0.1-operator</homepage>
     <license>Apache License 2.0</license>
     <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
     <doc>doc/userguide.md</doc>
