@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017 Hellenic Open Univercity - Student: Efthymios Tzortzis
+ * Copyright (c) 2016-2017 Hellenic Open University - Student: Efthymios Tzortzis
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
