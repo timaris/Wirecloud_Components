@@ -21,6 +21,7 @@ References
 ----------
 
 * [FIWARE Lab's Data portal](https://data.lab.fiware.org)
-* [WIRECLOUD] (https://wirecloud.readthedocs.io)
-* [CKAN] (http://ckan.org/)
+* [WIRECLOUD](https://wirecloud.readthedocs.io)
+* [CKAN](http://ckan.org/)
+* [Github Repository](https://github.com/timaris/Wirecloud_Components/tree/master/change_gr_number_format_0.1-operator)
 
