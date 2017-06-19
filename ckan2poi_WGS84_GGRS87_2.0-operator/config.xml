@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="timaris" name="ckan2poi_WGS84_GGRS87" version="2.0">
+  <details>
+    <title>CKAN to PoIs - multiple geo-systems</title>
+    <homepage>https://github.com/timaris/Wirecloud_Components</homepage>
+    <authors>EFTHYMIOS TZORTZIS</authors>
+    <email>e-tim@otenet.gr</email>
+    <image>images/picture.png</image>
+    <description>Tranfer data from CKAN Datasets into Point of Interests (supports Systems "GGRS87" and "WGS84").</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <license>Apache License 2.0</license>
+    <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
+    <doc>doc/userguide.md</doc>
+    <changelog>doc/changelog.md</changelog>
+  </details>
+  <preferences>
+      <preference name="coordinates_attr" label="Coordinates attribute" description="Name of the columns where the coordinates are stored. If the dataset provides the coordinates through a pair of columns, you can pass those names using a comma (e.g. 'latitude, longitude')" default="Latitude,Longitude" type="text"/>
+      <preference name="marker_url-type" label="Marker Icon URL type" description="Define if the URL pointing to a marker icon is an Absolute URL (type:'absolute_url') or Internal URL Source (type:'internal_url'). Leave empty for default marker icon" default="" type="text"/>
+	  <preference name="marker-icon" label="Marker Icon" description="Absolute URL or Internal URL Source pointing to an image that will be used for the markers created by this operator. Default internal folder 'images/' . Leave this setting empty for using the default marker icon" default="" type="text"/>
+	  <preference name="coordinate_system" label="Coordinate System" description="The Coordinate System used by the entity data. Leave empty for global system WGS84" default="GGRS87" type="text"/>
+  </preferences>
+  <wiring>
+    <outputendpoint name="poiOutput" type="text" label="Transformed PoIs" description="Transformed Point of Interest from the received dataset" friendcode="poi-list"/>
+    <inputendpoint name="entityInput" type="text" label="Entity" description="Received dataset will be transformed into PoIs" friendcode="entity"/>
+  </wiring>
+  <scripts>
+    <script src="js/proj4js-2.4.3/dist/proj4.js" />
+	<script src="js/maintim.js"/>
+  </scripts>
+</operator>
