@@ -41,7 +41,7 @@ References
 * [FIWARE Lab's Data portal](https://data.lab.fiware.org)
 * [WIRECLOUD Manual](https://wirecloud.readthedocs.io)
 * [CKAN Platform](http://ckan.org/)
-* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components)
+* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/ckan2poi_WGS84_GGRS87_2.0-operator)
 * [Github Repository of CoNWet](https://github.com/wirecloud-fiware/ckan2poi)
 * [Proj4js Library](http://proj4js.org/)
 * [Coordinate Systems Worldwide](https://epsg.io/)
