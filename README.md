@@ -1,5 +1,5 @@
 # Wirecloud_Components
-Widgets and Operators for Wirecloud created by user: timaris .
+Widgets, Operators and Mashups for Wirecloud created by user: timaris .
 They must be used in Fiware Platform.
 
 Each folder contains a seperate widget or operator to be used in Wirecloud. Once downloaded, you must zip the contents of each folder in a .wgt file in order to upload them in Wirecloud FiLab.
