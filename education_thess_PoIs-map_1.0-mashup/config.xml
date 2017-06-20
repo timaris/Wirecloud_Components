@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="EFTHYMIOS TZORTZIS" name="education_thess_PoIs-map" version="1.0">
+  <details>
+    <email>e-tim@otenet.gr</email>
+    <image>images/catalogue.png</image>
+    <description>"PoIs of educational institutes in Thessaloniki
+
+Σημεία ενδιαφέροντος των εκπαιδευτικών ιδρυμάτων στη Θεσσαλονίκη"
+</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <authors>timaris</authors>
+  </details>
+  <structure>
+    <preferencevalue name="public" value="True"/>
+    <tab id="0" name="Tab">
+      <resource id="41712" name="data-viewer-table" title="Data Viewer (Table)" vendor="CoNWeT" version="2.1">
+        <position x="0" y="67" z="0"/>
+        <rendering height="37" width="19" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+      <resource id="41710" name="map-viewer" title="Map Viewer" vendor="CoNWeT" version="2.5.7">
+        <position x="0" y="0" z="2"/>
+        <rendering height="59" width="19" layout="0"/>
+        <preferencevalue name="centerPreference" value=""/>
+        <preferencevalue name="zoomPreference" value="13"/>
+        <preferencevalue name="radiusPreference" value="10"/>
+        <preferencevalue name="initialZoom" value="3"/>
+      </resource>
+      <resource id="41711" name="input-box" title="Input Box" vendor="CoNWeT" version="1.0">
+        <position x="0" y="59" z="1"/>
+        <rendering height="8" width="19" layout="0"/>
+        <preferencevalue name="button_label_pref" value="Εμφάνιση στο χάρτη"/>
+        <preferencevalue name="input_placeholder_pref" value="Πληκτρολογήστε την επιθυμητή διεύθυνση ή τις συντεταγμένες (WGS84) σε μορφή &quot;Γεωγραφικό πλάτος,Γεωγραφικό μήκος&quot;"/>
+        <preferencevalue name="input_label_pref" value="Διεύθυνση"/>
+      </resource>
+    </tab>
+    <wiring version="2.0">
+      <operator id="3" name="ckan-source" vendor="CoNWeT" version="0.4.5">
+        <preferencevalue name="resource" value="81e2699c-a121-4403-a386-6036f34fbe5e"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100000"/>
+      </operator>
+      <operator id="7" name="ckan2poi_WGS84_GGRS87" vendor="timaris" version="2.0">
+        <preferencevalue name="coordinates_attr" value="POINT_Y, POINT_X"/>
+        <preferencevalue name="marker_url-type" value="internal_url"/>
+        <preferencevalue name="marker-icon" value="images/flaticon_pois/education/school.png"/>
+        <preferencevalue name="coordinate_system" value="GGRS87"/>
+      </operator>
+      <connection>
+        <source endpoint="resource" id="3" type="operator"/>
+        <target endpoint="dataset" id="41712" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="outputKeyword" id="41711" type="widget"/>
+        <target endpoint="addressInput" id="41710" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="3" type="operator"/>
+        <target endpoint="entityInput" id="7" type="operator"/>
+      </connection>
+      <connection>
+        <source endpoint="poiOutput" id="7" type="operator"/>
+        <target endpoint="poiInput" id="41710" type="widget"/>
+      </connection>
+      <visualdescription>
+        <component id="3" type="operator">
+          <position x="185" y="269"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="7" type="operator">
+          <position x="510" y="428"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41712" type="widget">
+          <position x="487" y="79"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41710" type="widget">
+          <position x="995" y="182"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41711" type="widget">
+          <position x="746" y="267"/>
+          <sources/>
+          <targets/>
+        </component>
+        <connection sourcename="operator/3/resource" targetname="widget/41712/dataset"/>
+        <connection sourcename="widget/41711/outputKeyword" targetname="widget/41710/addressInput"/>
+        <connection sourcename="operator/3/resource" targetname="operator/7/entityInput"/>
+        <connection sourcename="operator/7/poiOutput" targetname="widget/41710/poiInput"/>
+      </visualdescription>
+    </wiring>
+  </structure>
+  <wiring>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <outputendpoint name="routeDescriptionOutput" type="text" label="Route Description" description="Route description step by step. It may be connected with Route Description widget." friendcode="routeDescription"/>
+    <outputendpoint name="urlRouteMapOutput" type="text" label="URL Route Map" description="URL Route Map" friendcode="url"/>
+    <outputendpoint name="addressOutput" type="text" label="Address" description="Address of a Google Map marker." friendcode="address"/>
+    <outputendpoint name="utmCoordOutput" type="text" label="UTM Coordinates" description="UTM X, Y coordinates that is displayed in the map." friendcode="utmCoord"/>
+    <outputendpoint name="decimalCoordOutput" type="text" label="Decimal Coordinates" description="Decimal X, Y coordinates that is displayed in the map." friendcode="decimalCoord"/>
+    <outputendpoint name="poiOutput" type="text" label="PoI selected" description="A PoI has been selected on the map" friendcode="poi"/>
+    <outputendpoint name="poiListOutput" type="text" label="PoI visibility change" description="Change PoI list inside the viewport" friendcode="poiList"/>
+    <outputendpoint name="boundsOutput" type="text" label="Change Viewport" description="Change bounds of the current viewport." friendcode="viewport"/>
+    <outputendpoint name="outputKeyword" type="text" label="Keyword" description="This event is sent when the user press the enter key or push the send button" friendcode="keyword"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="addressInput" type="text" label="Address" description="Address to be displayed on the map." actionlabel="Map Viewer Address" friendcode="address"/>
+    <inputendpoint name="coordsInput" type="text" label="Coordinates" description="Google Map Marker will be show in this decimal coordinates." actionlabel="Map Viewer Coordinates" friendcode="Coords"/>
+    <inputendpoint name="routeInput" type="text" label="Route" description="Google Maps route to be displayed on the map." actionlabel="Map Viewer Route" friendcode="route"/>
+    <inputendpoint name="routeStepInput" type="text" label="Route Step" description="Detailed Step of a route. It may be connected with Route Description widget." actionlabel="Map Viewer Details Steps Route" friendcode="detailStep"/>
+    <inputendpoint name="poiInput" type="text" label="Insert/Update PoI" description="Insert or update a Point of Interest." actionlabel="Map Viewer Insert/Update PoI" friendcode="poi"/>
+    <inputendpoint name="deletePoiInput" type="text" label="Delete PoI" description="Removes a point or more point of interests from the map." actionlabel="Map Viewer Delete PoI" friendcode="poi"/>
+    <inputendpoint name="poiInputCenter" type="text" label="Insert/Update Centered PoI" description="Insert or update a PoI and change the viewport centering the map on it" actionlabel="Map Viewer Centered PoI" friendcode="poi"/>
+    <inputendpoint name="selectPoiInput" type="text" label="Select PoI" description="Select a PoI and change the viewport centering the map on it" actionlabel="Map Viewer Select PoI" friendcode="poi"/>
+  </wiring>
+</mashup>

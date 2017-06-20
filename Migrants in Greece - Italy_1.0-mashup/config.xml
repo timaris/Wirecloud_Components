@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="EFTHYMIOS TZORTZIS" name="Migrants in Greece - Italy" version="1.0">
+  <details>
+    <email>e-tim@otenet.gr</email>
+    <image>images/catalogue.png</image>
+    <description>Compared graphs for arrivals of migrants in Greece-Italy
+
+Συγκρίσιμα γραφήματα για τις αφίξεις μεταναστών στην Ελλάδα-Ιταλία</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <authors>timaris</authors>
+  </details>
+  <structure>
+    <preferencevalue name="public" value="True"/>
+    <tab id="0" name="Tab">
+      <resource id="41627" name="highcharts" title="Highcharts" vendor="CoNWeT" version="0.1.2">
+        <position x="10" y="97" z="4"/>
+        <rendering height="34" width="9" layout="0"/>
+      </resource>
+      <resource id="41629" name="data-viewer-table" title="Data Viewer (Table)" vendor="CoNWeT" version="2.1">
+        <position x="10" y="0" z="6"/>
+        <rendering height="29" width="9" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+      <resource id="41620" name="googlecharts" title="Google Charts" vendor="CoNWeT" version="1.0.3">
+        <position x="0" y="62" z="0"/>
+        <rendering height="35" width="9" layout="0"/>
+      </resource>
+      <resource id="41624" name="data-viewer-table" title="Data Viewer (Table)" vendor="CoNWeT" version="2.1">
+        <position x="0" y="0" z="1"/>
+        <rendering height="29" width="9" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+      <resource id="41623" name="flotr2-graph" title="Flotr2 Graph" vendor="CoNWeT" version="1.0.0">
+        <position x="0" y="131" z="2"/>
+        <rendering height="41" width="9" layout="0"/>
+      </resource>
+      <resource id="41622" name="highcharts" title="Highcharts" vendor="CoNWeT" version="0.1.2">
+        <position x="0" y="97" z="3"/>
+        <rendering height="34" width="9" layout="0"/>
+      </resource>
+      <resource id="41621" name="ckan-graph-creator" title="CKAN Graph creator" vendor="CoNWeT" version="1.1.2">
+        <position x="0" y="29" z="5"/>
+        <rendering height="33" width="9" layout="0"/>
+      </resource>
+      <resource id="41626" name="ckan-graph-creator" title="CKAN Graph creator" vendor="CoNWeT" version="1.1.2">
+        <position x="10" y="29" z="7"/>
+        <rendering height="33" width="9" layout="0"/>
+      </resource>
+      <resource id="41625" name="googlecharts" title="Google Charts" vendor="CoNWeT" version="1.0.3">
+        <position x="10" y="62" z="8"/>
+        <rendering height="35" width="9" layout="0"/>
+      </resource>
+      <resource id="41628" name="flotr2-graph" title="Flotr2 Graph" vendor="CoNWeT" version="1.0.0">
+        <position x="10" y="131" z="9"/>
+        <rendering height="41" width="9" layout="0"/>
+      </resource>
+    </tab>
+    <wiring version="2.0">
+      <operator id="3" name="ckan-source changed by timaris" vendor="CoNWeT - changed by timaris" version="0.4.4">
+        <preferencevalue name="resource" value="f5bd4d17-1a99-4cc0-b109-381542f9739f"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100"/>
+      </operator>
+      <operator id="4" name="ckan-source changed by timaris" vendor="CoNWeT - changed by timaris" version="0.4.4">
+        <preferencevalue name="resource" value="41787cee-a375-4d32-bfe3-f8a8a57ce31c"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100"/>
+      </operator>
+      <connection>
+        <source endpoint="flotr2-graph-config" id="41626" type="widget"/>
+        <target endpoint="input" id="41628" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="highcharts-graph-config" id="41626" type="widget"/>
+        <target endpoint="highcharts" id="41627" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="googlecharts-graph-config" id="41626" type="widget"/>
+        <target endpoint="input" id="41625" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="3" type="operator"/>
+        <target endpoint="dataset" id="41624" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="3" type="operator"/>
+        <target endpoint="dataset" id="41621" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="flotr2-graph-config" id="41621" type="widget"/>
+        <target endpoint="input" id="41623" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="googlecharts-graph-config" id="41621" type="widget"/>
+        <target endpoint="input" id="41620" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="highcharts-graph-config" id="41621" type="widget"/>
+        <target endpoint="highcharts" id="41622" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="4" type="operator"/>
+        <target endpoint="dataset" id="41629" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="4" type="operator"/>
+        <target endpoint="dataset" id="41626" type="widget"/>
+      </connection>
+      <visualdescription>
+        <component id="3" type="operator">
+          <position x="81" y="141"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="4" type="operator">
+          <position x="80" y="625"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41626" type="widget">
+          <position x="377" y="643"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41627" type="widget">
+          <position x="749" y="577"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41624" type="widget">
+          <position x="391" y="25"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41625" type="widget">
+          <position x="761" y="478"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41622" type="widget">
+          <position x="770" y="207"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41623" type="widget">
+          <position x="777" y="356"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41620" type="widget">
+          <position x="782" y="84"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41621" type="widget">
+          <position x="384" y="211"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41628" type="widget">
+          <position x="739" y="705"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41629" type="widget">
+          <position x="355" y="477"/>
+          <sources/>
+          <targets/>
+        </component>
+        <connection sourcename="widget/41626/flotr2-graph-config" targetname="widget/41628/input"/>
+        <connection sourcename="widget/41626/highcharts-graph-config" targetname="widget/41627/highcharts"/>
+        <connection sourcename="widget/41626/googlecharts-graph-config" targetname="widget/41625/input"/>
+        <connection sourcename="operator/3/resource" targetname="widget/41624/dataset"/>
+        <connection sourcename="operator/3/resource" targetname="widget/41621/dataset"/>
+        <connection sourcename="widget/41621/flotr2-graph-config" targetname="widget/41623/input"/>
+        <connection sourcename="widget/41621/googlecharts-graph-config" targetname="widget/41620/input"/>
+        <connection sourcename="widget/41621/highcharts-graph-config" targetname="widget/41622/highcharts"/>
+        <connection sourcename="operator/4/resource" targetname="widget/41629/dataset"/>
+        <connection sourcename="operator/4/resource" targetname="widget/41626/dataset"/>
+      </visualdescription>
+    </wiring>
+  </structure>
+  <embedded>
+    <resource name="flotr2-graph" src="macs/CoNWeT_flotr2-graph_1.0.0.wgt" vendor="CoNWeT" version="1.0.0"/>
+    <resource name="highcharts" src="macs/CoNWeT_highcharts_0.1.2.wgt" vendor="CoNWeT" version="0.1.2"/>
+    <resource name="ckan-graph-creator" src="macs/CoNWeT_ckan-graph-creator_1.1.2.wgt" vendor="CoNWeT" version="1.1.2"/>
+    <resource name="data-viewer-table" src="macs/CoNWeT_data-viewer-table_2.1.wgt" vendor="CoNWeT" version="2.1"/>
+    <resource name="ckan-source changed by timaris" src="macs/CoNWeT - changed by timaris_ckan-source changed by timaris_0.4.4.wgt" vendor="CoNWeT - changed by timaris" version="0.4.4"/>
+    <resource name="googlecharts" src="macs/CoNWeT_googlecharts_1.0.3.wgt" vendor="CoNWeT" version="1.0.3"/>
+  </embedded>
+  <wiring>
+    <outputendpoint name="selected" type="text" label="Selected data output" description="Send the data when it's clicked" friendcode="selected-data"/>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <outputendpoint name="data_selected" type="text" label="Data Selected" description="Data Selection. See the documentation for more information" friendcode="googlecharts-graph-data-out"/>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <outputendpoint name="selected" type="text" label="Selected data output" description="Send the data when it's clicked" friendcode="selected-data"/>
+    <outputendpoint name="flotr2-graph-config" type="text" label="Flotr2 Configuration" description="The configuration of your flotr2 graph" friendcode="flotr2-graph-data"/>
+    <outputendpoint name="googlecharts-graph-config" type="text" label="Google Charts Configuration" description="The configuration of your Google Charts graph" friendcode="google-charts-data"/>
+    <outputendpoint name="highcharts-graph-config" type="text" label="HighCharts Configuration" description="The configuration of your HighCharts graph" friendcode="highcharts-charts-data"/>
+    <outputendpoint name="flotr2-graph-config" type="text" label="Flotr2 Configuration" description="The configuration of your flotr2 graph" friendcode="flotr2-graph-data"/>
+    <outputendpoint name="googlecharts-graph-config" type="text" label="Google Charts Configuration" description="The configuration of your Google Charts graph" friendcode="google-charts-data"/>
+    <outputendpoint name="highcharts-graph-config" type="text" label="HighCharts Configuration" description="The configuration of your HighCharts graph" friendcode="highcharts-charts-data"/>
+    <outputendpoint name="data_selected" type="text" label="Data Selected" description="Data Selection. See the documentation for more information" friendcode="googlecharts-graph-data-out"/>
+    <inputendpoint name="highcharts" type="text" label="Highcharts Options" description="Highcharts Options" friendcode="highchart-options"/>
+    <inputendpoint name="highstock" type="text" label="Highstock Options" description="Highstock Options" friendcode="highstock-options"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="input" type="text" label="Data in" description="Data Input. See the documentation for more information" friendcode="googlecharts-graph-data-in"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="input" type="text" label="Data in" description="Graph configuration and data values input. See the documentation for a more detailed description and examples" friendcode="floatr2-graph-data"/>
+    <inputendpoint name="highcharts" type="text" label="Highcharts Options" description="Highcharts Options" friendcode="highchart-options"/>
+    <inputendpoint name="highstock" type="text" label="Highstock Options" description="Highstock Options" friendcode="highstock-options"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="input" type="text" label="Data in" description="Data Input. See the documentation for more information" friendcode="googlecharts-graph-data-in"/>
+    <inputendpoint name="input" type="text" label="Data in" description="Graph configuration and data values input. See the documentation for a more detailed description and examples" friendcode="floatr2-graph-data"/>
+  </wiring>
+</mashup>
