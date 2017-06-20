@@ -19,6 +19,9 @@
  */
  
  /* The code includes the Javascript Reprojection Library "Proj4js_version 2.4.3" under the below Licence:
+  *
+  *   http://proj4js.org/	https://github.com/proj4js/proj4js
+  *
   *	Copyright (c) 2014, Mike Adair, Richard Greenwood, Didier Richard, Stephen Irons, Olivier Terral and Calvin Metcalf
   *
   * Permission is hereby granted, free of charge, to any person obtaining a
