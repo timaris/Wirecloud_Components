@@ -7,7 +7,6 @@
 
 Αρχαιολογικοί χώροι στην Κρήτη</description>
     <longdescription>DESCRIPTION.md</longdescription>
-    <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/archaelogical_places-Crete-mashup</homepage>
     <authors>timaris</authors>
   </details>
   <structure>
@@ -16,20 +15,20 @@
     <tab id="0" name="Tab">
       <resource id="38964" name="map-viewer" title="Map Viewer" vendor="CoNWeT" version="2.5.7">
         <position x="0" y="0" z="0"/>
-        <rendering height="11" width="19" layout="0"/>
-        <preferencevalue name="centerPreference" value=""/>
-        <preferencevalue name="zoomPreference" value="13"/>
+        <rendering height="8" width="19" layout="0"/>
+        <preferencevalue name="centerPreference" value="Rethimno"/>
+        <preferencevalue name="zoomPreference" value="15"/>
         <preferencevalue name="radiusPreference" value="10"/>
-        <preferencevalue name="initialZoom" value="3"/>
+        <preferencevalue name="initialZoom" value="10"/>
       </resource>
       <resource id="38963" name="data-viewer-table" title="Data Viewer (Table)" vendor="CoNWeT" version="2.0.0">
-        <position x="0" y="12" z="2"/>
+        <position x="0" y="9" z="2"/>
         <rendering height="7" width="19" layout="0"/>
         <preferencevalue name="pagination" value="0.0"/>
         <preferencevalue name="search" value="true"/>
       </resource>
       <resource id="41733" name="input-box" title="Input Box" vendor="CoNWeT" version="1.0">
-        <position x="0" y="11" z="1"/>
+        <position x="0" y="8" z="1"/>
         <rendering height="1" width="19" layout="0"/>
         <preferencevalue name="button_label_pref" value="Show in the map"/>
         <preferencevalue name="input_placeholder_pref" value="Type the desired address or the coordinates (WGS84) in form &quot;Latitude,Longitude&quot;"/>
