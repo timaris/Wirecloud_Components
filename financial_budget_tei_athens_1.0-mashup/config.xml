@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="EFTHYMIOS TZORTZIS" name="financial_budget_tei athens" version="1.0">
+  <details>
+    <email>e-tim@otenet.gr</email>
+    <image>images/catalogue.png</image>
+    <description>Budget of Athens University of Applied Sciences
+
+Προϋπολογισμός του ΤΕΙ Αθηνών</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/financial_budget_tei athens_1.0-mashup</homepage>
+    <authors>timaris</authors>
+  </details>
+  <structure>
+    <preferencevalue name="public" value="True"/>
+    <tab id="0" name="Tab">
+      <resource id="41745" name="data-viewer-table" title="Έσοδα Απριλίου 2017" vendor="CoNWeT" version="2.1">
+        <position x="0" y="103" z="0"/>
+        <rendering height="31" width="9" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+      <resource id="41744" name="data-viewer-table" title="Έξοδα Μαρτίου 2017" vendor="CoNWeT" version="2.1">
+        <position x="9" y="134" z="3"/>
+        <rendering height="26" width="10" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+      <resource id="41777" name="multichart" title="Έξοδα Απριλίου 2017" vendor="XLAB" version="1.1.0">
+        <position x="0" y="54" z="7"/>
+        <rendering height="49" width="9" layout="0"/>
+        <preferencevalue name="xTickType_pref" value="as_is"/>
+        <preferencevalue name="yTickType_pref" value="as_is"/>
+        <preferencevalue name="xAxisLabel_pref" value="Αριθμός id"/>
+        <preferencevalue name="assimilateCKAN_pref" value="true"/>
+        <preferencevalue name="stacked_pref" value="true"/>
+        <preferencevalue name="yAxisLabel_pref" value="Αξία σε €"/>
+        <preferencevalue name="chartType_pref" value="line_chart"/>
+      </resource>
+      <resource id="41748" name="multichart" title="Έσοδα Απριλίου 2017" vendor="XLAB" version="1.1.0">
+        <position x="0" y="0" z="5"/>
+        <rendering height="54" width="9" layout="0"/>
+        <preferencevalue name="xTickType_pref" value="as_is"/>
+        <preferencevalue name="yTickType_pref" value="as_is"/>
+        <preferencevalue name="xAxisLabel_pref" value="Αριθμός id"/>
+        <preferencevalue name="assimilateCKAN_pref" value="true"/>
+        <preferencevalue name="stacked_pref" value="true"/>
+        <preferencevalue name="yAxisLabel_pref" value="Αξία σε €"/>
+        <preferencevalue name="chartType_pref" value="line_chart"/>
+      </resource>
+      <resource id="41778" name="multichart" title="Έξοδα Μαρτίου 2017" vendor="XLAB" version="1.1.0">
+        <position x="9" y="54" z="4"/>
+        <rendering height="49" width="9" layout="0"/>
+        <preferencevalue name="xTickType_pref" value="as_is"/>
+        <preferencevalue name="yTickType_pref" value="as_is"/>
+        <preferencevalue name="xAxisLabel_pref" value="Αριθμός id"/>
+        <preferencevalue name="assimilateCKAN_pref" value="true"/>
+        <preferencevalue name="stacked_pref" value="true"/>
+        <preferencevalue name="yAxisLabel_pref" value="Αξία σε €"/>
+        <preferencevalue name="chartType_pref" value="line_chart"/>
+      </resource>
+      <resource id="41775" name="data-viewer-table" title="Έξοδα Απριλίου 2017" vendor="CoNWeT" version="2.1">
+        <position x="0" y="134" z="2"/>
+        <rendering height="26" width="9" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+      <resource id="41776" name="multichart" title="Έσοδα Μαρτίου 2017" vendor="XLAB" version="1.1.0">
+        <position x="9" y="0" z="6"/>
+        <rendering height="54" width="9" layout="0"/>
+        <preferencevalue name="xTickType_pref" value="as_is"/>
+        <preferencevalue name="yTickType_pref" value="as_is"/>
+        <preferencevalue name="xAxisLabel_pref" value="Αριθμός id"/>
+        <preferencevalue name="assimilateCKAN_pref" value="true"/>
+        <preferencevalue name="stacked_pref" value="true"/>
+        <preferencevalue name="yAxisLabel_pref" value="Αξία σε €"/>
+        <preferencevalue name="chartType_pref" value="line_chart"/>
+      </resource>
+      <resource id="41774" name="data-viewer-table" title="Έσοδα Μαρτίου 2017" vendor="CoNWeT" version="2.1">
+        <position x="9" y="103" z="1"/>
+        <rendering height="31" width="10" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+    </tab>
+    <wiring version="2.0">
+      <operator id="11" name="ckan-source" vendor="CoNWeT" version="0.4.5">
+        <preferencevalue name="resource" value="aa13726e-5702-46e5-adb6-4055f5cd5ea5"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100000"/>
+      </operator>
+      <operator id="10" name="change gr_number format" vendor="timaris" version="0.1"/>
+      <operator id="12" name="ckan-source" vendor="CoNWeT" version="0.4.5">
+        <preferencevalue name="resource" value="36051d3e-2660-4ca6-a849-76f9e9870baa"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100000"/>
+      </operator>
+      <operator id="2" name="ckan-source" vendor="CoNWeT" version="0.4.5">
+        <preferencevalue name="resource" value="f2b9eb24-0991-4708-9baa-209f9dcb4748"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100000"/>
+      </operator>
+      <operator id="7" name="change gr_number format" vendor="timaris" version="0.1"/>
+      <operator id="6" name="change gr_number format" vendor="timaris" version="0.1"/>
+      <operator id="9" name="change gr_number format" vendor="timaris" version="0.1"/>
+      <operator id="8" name="ckan-source" vendor="CoNWeT" version="0.4.5">
+        <preferencevalue name="resource" value="05fb6e16-e567-4e8a-b6e6-49098a9117b0"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100000"/>
+      </operator>
+      <connection>
+        <source endpoint="output" id="6" type="operator"/>
+        <target endpoint="dataset" id="41745" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="2" type="operator"/>
+        <target endpoint="dataset" id="6" type="operator"/>
+      </connection>
+      <connection>
+        <source endpoint="output" id="6" type="operator"/>
+        <target endpoint="mc_in_Data" id="41748" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="8" type="operator"/>
+        <target endpoint="dataset" id="7" type="operator"/>
+      </connection>
+      <connection>
+        <source endpoint="output" id="7" type="operator"/>
+        <target endpoint="dataset" id="41774" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="output" id="7" type="operator"/>
+        <target endpoint="mc_in_Data" id="41776" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="11" type="operator"/>
+        <target endpoint="dataset" id="9" type="operator"/>
+      </connection>
+      <connection>
+        <source endpoint="output" id="9" type="operator"/>
+        <target endpoint="dataset" id="41775" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="output" id="9" type="operator"/>
+        <target endpoint="mc_in_Data" id="41777" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="12" type="operator"/>
+        <target endpoint="dataset" id="10" type="operator"/>
+      </connection>
+      <connection>
+        <source endpoint="output" id="10" type="operator"/>
+        <target endpoint="dataset" id="41744" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="output" id="10" type="operator"/>
+        <target endpoint="mc_in_Data" id="41778" type="widget"/>
+      </connection>
+      <visualdescription>
+        <component id="11" type="operator">
+          <position x="173" y="514"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="10" type="operator">
+          <position x="427" y="712"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="12" type="operator">
+          <position x="174" y="712"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="2" type="operator">
+          <position x="180" y="58"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="7" type="operator">
+          <position x="420" y="277"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="6" type="operator">
+          <position x="418" y="58"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="9" type="operator">
+          <position x="420" y="515"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="8" type="operator">
+          <position x="178" y="272"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41774" type="widget">
+          <position x="758" y="240"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41775" type="widget">
+          <position x="764" y="458"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41776" type="widget">
+          <position x="764" y="346"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41777" type="widget">
+          <position x="773" y="574"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41778" type="widget">
+          <position x="774" y="767"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41748" type="widget">
+          <position x="761" y="136"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41745" type="widget">
+          <position x="754" y="17"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41744" type="widget">
+          <position x="773" y="665"/>
+          <sources/>
+          <targets/>
+        </component>
+        <connection sourcename="operator/6/output" targetname="widget/41745/dataset"/>
+        <connection sourcename="operator/2/resource" targetname="operator/6/dataset"/>
+        <connection sourcename="operator/6/output" targetname="widget/41748/mc_in_Data"/>
+        <connection sourcename="operator/8/resource" targetname="operator/7/dataset"/>
+        <connection sourcename="operator/7/output" targetname="widget/41774/dataset"/>
+        <connection sourcename="operator/7/output" targetname="widget/41776/mc_in_Data"/>
+        <connection sourcename="operator/11/resource" targetname="operator/9/dataset"/>
+        <connection sourcename="operator/9/output" targetname="widget/41775/dataset"/>
+        <connection sourcename="operator/9/output" targetname="widget/41777/mc_in_Data"/>
+        <connection sourcename="operator/12/resource" targetname="operator/10/dataset"/>
+        <connection sourcename="operator/10/output" targetname="widget/41744/dataset"/>
+        <connection sourcename="operator/10/output" targetname="widget/41778/mc_in_Data"/>
+      </visualdescription>
+    </wiring>
+  </structure>
+  <wiring>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="mc_in_Data" type="text" label="Data" description="Data required to draw the graph" friendcode="multichartdata"/>
+    <inputendpoint name="mc_in_Data" type="text" label="Data" description="Data required to draw the graph" friendcode="multichartdata"/>
+    <inputendpoint name="mc_in_Data" type="text" label="Data" description="Data required to draw the graph" friendcode="multichartdata"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="mc_in_Data" type="text" label="Data" description="Data required to draw the graph" friendcode="multichartdata"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+  </wiring>
+</mashup>
