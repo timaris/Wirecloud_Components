@@ -13,5 +13,5 @@ References
 * [WIRECLOUD Manual](https://wirecloud.readthedocs.io)
 * [ORION BROKER Documentation](https://fiware-orion.readthedocs.io/en/develop/quick_start_guide/index.html)	
 * [NGSI Documentation](http://fiware-orion.readthedocs.io/en/latest/user/walkthrough_apiv1/)
-* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/)
+* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/ngsi-chat-op(by_tim)_1.0.2-operator)
 * [Github Repository of CoNWet](https://conwet.fi.upm.es/widgets/basic-chat)
