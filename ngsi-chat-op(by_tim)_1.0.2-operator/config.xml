@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT_changed_by_timaris" name="ngsi-chat-op_by_timaris" version="1.0.2">
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT_changed_by_timaris" name="ngsi-chat-oper_timaris" version="1.0.2">
     <details>
         <title>NGSI chat operator changed by timaris</title>
         <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/ngsi-chat-op(by_tim)_1.0.2-operator/</homepage>
-	    <authors>Miguel Jiménez changed by Efthymios Tzortzis</authors>
-        <email>mjimenez@fi.upm.es</email>
+	    <authors>Miguel Jiménez modified by timaris &lt;Efthymios Tzortzis&gt;</authors>
+		<contributors>Efthymios Tzortzis</contributors>
+        <email>mjimenez@fi.upm.es &lt;e-tim@otenet.gr&gt;</email>
         <image>images/operator_logo.png</image> <!-- 170x80 -->
-        <description>Connect to Orion Context Broker through NGSI WireCloud API for chat room</description>
+        <description>Connect to Orion Context Broker through NGSI WireCloud API for chat room (default room "Archaelogical_Places_Crete-Chat_Room")</description>
         <longdescription>README.md</longdescription>
         <license>Apache License 2.0</license>
         <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
