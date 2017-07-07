@@ -23,8 +23,8 @@
         <preference name="chatroom" type="text" label="Chat room" description="Chat room to send and receive messages" default="Archaelogical_Places_Crete-Chat_Room"/>
     </preferences>
     <wiring>
-        <outputendpoint name="toBeReceived" type="text" label="Messages from NGSI" description="Forward a message to a chat widget" friendcode="message" />
-        <inputendpoint name="toBeSent" type="text" label="Message to NGSI"  description="Receive messages to be sent to the chat room" friendcode="message" />
+        <outputendpoint name="toBeReceived" type="text" label="Messages from NGSI" description="Receives a message from a chat widget" friendcode="message" />
+        <inputendpoint name="toBeSent" type="text" label="Message to NGSI"  description="Send a message to the chat room" friendcode="message" />
     </wiring>
     <scripts>
         <script src="js/main.js"/>
