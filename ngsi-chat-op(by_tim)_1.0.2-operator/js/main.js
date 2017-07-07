@@ -2,7 +2,7 @@
 * Copyright (c) 2016-2017 Hellenic Open University - Student: Efthymios Tzortzis
  * You may use this operator only with the acceptance of the Licences included and obtaining a copy of them.
  *
- * The created operator is a modified version of "basic-chat_1.0.1" operator from ConWet under the below Licence:
+ * The created operator is a modified version of "ngsi-chat_1.0.1" operator from ConWet under the below Licence:
  * Copyright (c) 2014 CoNWeT Lab., Universidad Politécnica de Madrid
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
