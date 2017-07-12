@@ -2,7 +2,8 @@
 <operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT - changed by timaris" name="ckan-source changed by timaris" version="0.4.4">
   <details>
     <title>CKAN Source</title>
-    <authors>Aitor Magán García modified by timaris</authors>
+    <authors>Aitor Magán García modified by timaris &lt;Efthymios Tzortzis&gt;</authors>
+	<contributors>Efthymios Tzortzis</contributors>
     <email>amagan@conwet.com</email>
     <image>images/ckan.png</image>
     <description>An operator to retrieve data from a CKAN dataset</description>
