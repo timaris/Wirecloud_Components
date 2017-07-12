@@ -8,7 +8,7 @@ It has been configured to be used as default Chat Room in the implemented mashup
 Settings (Preferences)
 ----------------------
 
-1. Gravatar URL: You can specify your gravatar url account in order to be used by the chat widget ( https://gravatar.com/"your_gravatar_username" )                 
+1. Gravatar URL: You can specify your gravatar url account in order to be used by the chat widget ( https://gravatar.com/-your_gravatar_username- )                 
 
 Wiring
 ------
@@ -27,7 +27,7 @@ References
 * [WIRECLOUD Manual](https://wirecloud.readthedocs.io)
 * [ORION BROKER Documentation](https://fiware-orion.readthedocs.io/en/develop/quick_start_guide/index.html)	
 * [NGSI Documentation](http://fiware-orion.readthedocs.io/en/latest/user/walkthrough_apiv1/)
-* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/)
+* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/basic-chat-arch.(by_tim)_2.0-widget)
 * [Github Repository of CoNWet](https://github.com/wirecloud-fiware/quick-start-development-tutorial/tree/master/basic-chat)
 
 

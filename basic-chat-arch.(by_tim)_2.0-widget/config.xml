@@ -19,7 +19,7 @@
     <rendering width="5" height="24"/>
     <preferences>
         <preference name="gravatar" type="text" label="Gravatar URL" 
-                    description="URL to the gravatar profile of the user in form https://gravatar.com/'your_gravatar_username' " />
+                    description="URL to the gravatar profile of the user in form https://gravatar.com/-your_gravatar_username- " />
     </preferences>
     <wiring>
         <outputendpoint name="sendMsg" type="text" label="Send a message" 
