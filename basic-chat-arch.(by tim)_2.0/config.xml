@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<widget xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" 
+        vendor="CoNWeT_changed_by_timaris" name="basic-chat-timaris" version="2.0">
+    <details>
+        <title>Chat Room - Archaelogical Places in Crete</title>
+        <homepage>https://github.com/wirecloud-fiware/quick-start-development-tutorial</homepage>
+        <authors>Miguel Jimenez - Álvaro Arranz modified by timaris &lt;wirecloud@conwet.com&gt;</authors>
+        <contributors>EFTHYMIOS TZORTZIS</contributors>
+        <email>e-tim@otenet.gr</email>
+        <image>images/chat_logo.png</image> <!-- 170x80 -->
+        <description>Basic chat functionality for mashup "archaelogical places-Crete"</description>
+        <longdescription>README.md</longdescription>
+        <license>Apache License 2.0</license>
+        <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
+        <doc>doc/developer-guide.md</doc>
+		<changelog>doc/changelog.md</changelog>
+    </details>
+    <contents src="index.html" useplatformstyle="true"/>
+    <rendering width="5" height="24"/>
+    <preferences>
+        <preference name="gravatar" type="text" label="Gravatar URL" 
+                    description="URL to the gravatar profile of the user in form https://gravatar.com/'your_gravatar_username' " />
+    </preferences>
+    <wiring>
+        <outputendpoint name="sendMsg" type="text" label="Send a message" 
+                        description="The messages sent by the user" 
+                        friendcode="message"/>
+        <inputendpoint name="receiveMsg" type="text" label="Receive a message"  
+                       description="Messages sent by other widgets can be received" 
+                       friendcode="message" />
+    </wiring>
+</widget>

@@ -1,0 +1,101 @@
+body {  padding: 0;
+        margin: 0;
+        font-family: cursive;           
+        color: #333;
+        font-size: 20px;
+        font-weight: 700;								
+        line-height: 35px;
+		background: #e3edf0;						
+      }
+	  
+body,html { height: 100%;}
+
+#photo {padding: 3px;
+        border: 2px solid #eaeaea;
+        max-height: 48px;
+        max-width: 48px;
+        float:center-left;}
+		
+.sent,.received {
+        min-height: 36px;
+        padding: 2px;
+        border: 1px double #eaeaea;
+        border-radius: 5px;}
+		
+.sent{
+  margin: 5px 35px 10px 10px;
+  border: 3px double #1b1fcb;                     
+}
+
+.received{
+  margin: 5px 10px 10px 35px;
+        text-align: right;
+        border: 3px double #cb1b5b;				
+      }
+	  
+.received > p{						/* received message-box	*/
+  display: inline;
+  padding-right: 10px;
+  color: #15a663;						
+}
+
+.sent > img{ max-height: 28px;		/* sent message-box	*/
+        max-width: 28px;
+        margin: 2px;
+        float:left;}
+		
+.sent > p{							/* sent message-box	*/
+  display:inline;
+  padding-left: 10px;
+  color: #201da0;						
+}
+
+.received > img{ max-height: 28px;	/* received message-box	*/
+        max-width: 28px;
+        margin: 2px;
+        float:right;}
+		
+#username { display: inline;}
+
+#conversations { height: 80%;
+        overflow: scroll;}
+		
+#footer{
+  /*position: fixed;*/				/* change position of footer */
+  bottom: 0;
+  float: right;
+  padding-top: 10px;
+  padding-right: 45px;					
+}
+
+#header{
+  height:60px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#header #photo {display: none;}
+
+#input {								/* input field	*/
+  border:2px solid #517394;
+  border-radius: 5px;
+  -webkit-border-radius: 10px;
+  height: 36px;
+  margin-right: 15px;
+  font-size: 25px;
+  width: 500px;
+}
+
+#footer #input:focus {
+  border-color:#333;
+}
+
+#footer #send {						/* send button	*/
+	background: #dee7ee;
+	border:2px solid #517394;			
+    cursor:pointer;
+	border-radius: 5px;
+    -webkit-border-radius: 10px;
+    font-size: 33px;
+    vertical-align: middle;
+}
