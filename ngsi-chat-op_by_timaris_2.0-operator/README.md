@@ -4,7 +4,7 @@ Messages contain hash of the email of the sender (gravatar mail hash) and the te
 
 It is used by Basic Chat widget to connect to the chat room using wiring. Messages sent by the widget are received by this operator and published on the Context Broker, and messages received from the Context Broker subscription are sent back to the widget.
 
-This version 1.0.2 is ready to be used in the Wirecloud mashup ""archaelogical places-Crete" .
+This version 2.0 is ready to be used in the Wirecloud mashup "archaelogical places-Crete" .
 
 References
 ----------
@@ -13,5 +13,5 @@ References
 * [WIRECLOUD Manual](https://wirecloud.readthedocs.io)
 * [ORION BROKER Documentation](https://fiware-orion.readthedocs.io/en/develop/quick_start_guide/index.html)	
 * [NGSI Documentation](http://fiware-orion.readthedocs.io/en/latest/user/walkthrough_apiv1/)
-* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/ngsi-chat-op(by_tim)_1.0.2-operator)
+* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/ngsi-chat-op(by_tim)_2.0-operator)
 * [Github Repository of CoNWet](https://github.com/wirecloud-fiware/quick-start-development-tutorial/tree/master/ngsi-chat-op)

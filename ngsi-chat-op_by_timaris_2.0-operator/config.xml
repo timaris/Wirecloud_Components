@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="timaris" name="ngsi-chat-oper_timaris" version="1.0.2">
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="timaris" name="ngsi-chat-oper_timaris" version="2.0">
     <details>
         <title>NGSI chat operator changed by timaris</title>
-        <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/ngsi-chat-op(by_tim)_1.0.2-operator/</homepage>
+        <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/ngsi-chat-op(by_tim)_2.0-operator/</homepage>
 	    <authors>EFTHYMIOS TZORTZIS</authors>
 		<contributors>Miguel Jiménez _CoNWet</contributors>
         <email>e-tim@otenet.gr</email>
         <image>images/operator_logo.png</image> <!-- 170x80 -->
-        <description>Connect to Orion Context Broker through NGSI WireCloud API for chat room (default room "Archaelogical_Places_Crete-Chat_Room")</description>
+        <description>Connect to Orion Context Broker through NGSI WireCloud API for chat room (default room "Chat_Room-Archaelogical_Places_Crete")</description>
         <longdescription>README.md</longdescription>
         <license>Apache License 2.0</license>
         <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
@@ -20,7 +20,7 @@
     <preferences>
         <preference name="ngsi_server" type="text" label="NGSI server URL" description="URL of the Orion Context Broker to use for retrieving entity information" default="http://orion.lab.fiware.org:1026/"/>
         <preference name="ngsi_proxy" type="text" label="NGSI proxy URL" description="URL of the PubSub Context Broker proxy to use for receiving notifications about changes" default="https://ngsiproxy.lab.fiware.org"/>
-        <preference name="chatroom" type="text" label="Chat room" description="Chat room to send and receive messages" default="Archaelogical_Places_Crete-Chat_Room"/>
+        <preference name="chatroom" type="text" label="Chat room" description="Chat room to send and receive messages" default="Chat_Room-Archaelogical_Places_Crete"/>
     </preferences>
     <wiring>
         <outputendpoint name="toBeReceived" type="text" label="Messages from NGSI" description="Receives a message from a chat widget" friendcode="message" />
