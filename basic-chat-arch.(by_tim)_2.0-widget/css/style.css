@@ -5,7 +5,7 @@ body {  padding: 0;
         font-size: 20px;
         font-weight: 700;								
         line-height: 35px;
-		background: #e3edf0;						
+		background: #e3edf0;		/* change backround color	*/				
       }
 	  
 body,html { height: 100%;}
@@ -16,18 +16,18 @@ body,html { height: 100%;}
         max-width: 48px;
         float:center-left;}
 		
-.sent,.received {
+.sent,.received {					
         min-height: 36px;
         padding: 2px;
         border: 1px double #eaeaea;
         border-radius: 5px;}
 		
-.sent{
-  margin: 5px 35px 10px 10px;
-  border: 3px double #1b1fcb;                     
+.sent{								/* border of sent-box messages	*/
+		margin: 5px 35px 10px 10px;
+		border: 3px double #1b1fcb;                     
 }
 
-.received{
+.received{							/* border of received-box messages	*/
   margin: 5px 10px 10px 35px;
         text-align: right;
         border: 3px double #cb1b5b;				
@@ -74,7 +74,7 @@ body,html { height: 100%;}
   padding-top: 15px;
 }
 
-#header #photo {display: none;}
+#header #photo {display: none;}		/* disable gravatar-photo in header	*/
 
 #input {								/* input field	*/
   border:2px solid #517394;

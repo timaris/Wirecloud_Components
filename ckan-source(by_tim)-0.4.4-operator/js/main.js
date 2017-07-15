@@ -2,8 +2,9 @@
  * Copyright (c) 2016-2017 Hellenic Open University - Student: Efthymios Tzortzis
  * You may use this operator only with the acceptance of the Licences included and obtaining a copy of them.
  *
- * The created operator is a modified version of "ckan-source" operator ver.0.4.3 from ConWet under the below Licence:
+ * The created operator is a modified version of "ckan-source" operator ver.0.4.3 from CoNWet under the below Licence:
  * Copyright (c) 2014-2015 CoNWeT Lab., Universidad Politécnica de Madrid
+ * Author: Aitor Magán García
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

@@ -32,6 +32,7 @@ References
 ----------
 
 * [FIWARE Lab's Data portal](https://data.lab.fiware.org)
-* [CKAN][ckan]
-
-[ckan]: http://ckan.org/
+* [WIRECLOUD Manual](https://wirecloud.readthedocs.io)
+* [CKAN Platform](http://ckan.org/)
+* [Github Repository of timaris](https://github.com/timaris/Wirecloud_Components/tree/master/ckan-source(by_tim)-0.4.4-operator)
+* [Github Repository of CoNWet](https://github.com/wirecloud-fiware/ckan-source-operator)

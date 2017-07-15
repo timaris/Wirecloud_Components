@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT - changed by timaris" name="ckan-source changed by timaris" version="0.4.4">
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="timaris" name="ckan-source_by_timaris" version="0.4.4">
   <details>
-    <title>CKAN Source</title>
-    <authors>Aitor Magán García modified by timaris &lt;Efthymios Tzortzis&gt;</authors>
-	<contributors>Efthymios Tzortzis</contributors>
-    <email>amagan@conwet.com</email>
+    <title>CKAN Source by timaris</title>
+    <authors>EFTHYMIOS TZORTZIS</authors>
+	<contributors>Aitor Magán García _CoNWet</contributors>
+    <email>e-tim@otenet.gr</email>
     <image>images/ckan.png</image>
     <description>An operator to retrieve data from a CKAN dataset</description>
     <longdescription>DESCRIPTION.md</longdescription>
-    <homepage>https://github.com/wirecloud-fiware/ckan-source-operator</homepage>
+    <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/ckan-source(by_tim)-0.4.4-operator</homepage>
     <license>Apache License 2.0</license>
     <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
     <doc>doc/index.md</doc>

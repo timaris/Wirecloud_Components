@@ -142,7 +142,7 @@
         MashupPlatform.wiring.pushEvent("poiOutput", JSON.stringify(collection));			// send the coordinates to the output endpoint "poiOutput"
     });
 
-    var entity2poi = function entity2poi(entity, coordinates, id_prefix) {
+    var entity2poi = function entity2poi(entity, coordinates, id_prefix) {					// structure of poi coordinates
         var poi = {
             id: id_prefix + entity._id,
             icon: icon,

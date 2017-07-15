@@ -1,5 +1,6 @@
 v0.4.4 (by timaris)
-This version of the operator (0.4.4) modifies the previous one (0.4.3) due to "409-conflict" error. We removed the "parameters" from the "make_request" function .
+==================
+This version of the operator (0.4.4) modifies the previous one (0.4.3) from CoNWet due to "409-conflict" error. We removed the "parameters" from the "make_request" function .
 Add of the variable "url" , where we specify the url structure of the ckan dataset
 
 v0.4.3
