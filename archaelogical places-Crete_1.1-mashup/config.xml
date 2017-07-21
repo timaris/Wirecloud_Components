@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mashup xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="EFTHYMIOS TZORTZIS" name="archaelogical places-Crete" version="1.1">
+  <details>
+    <email>e-tim@otenet.gr</email>
+    <image>images/catalogue.png</image>
+    <description>Archaeological places in Crete
+
+Αρχαιολογικοί χώροι στην Κρήτη</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <homepage>https://github.com/timaris/Wirecloud_Components/tree/master/archaelogical%20places-Crete_1.1-mashup</homepage>
+    <authors>timaris</authors>
+  </details>
+  <structure>
+    <preferencevalue name="public" value="True"/>
+    <preferencevalue name="baselayout" value="{&quot;verticalmargin&quot;:3,&quot;smart&quot;:&quot;false&quot;,&quot;horizontalmargin&quot;:4,&quot;type&quot;:&quot;gridlayout&quot;,&quot;columns&quot;:20,&quot;cellheight&quot;:12,&quot;rows&quot;:12}"/>
+    <tab id="0" name="Tab">
+      <resource id="38964" name="map-viewer" title="Archaelogical PoIs in Crete, Greece" vendor="CoNWeT" version="2.5.7">
+        <position x="0" y="0" z="2"/>
+        <rendering height="8" width="19" layout="0"/>
+        <preferencevalue name="centerPreference" value="Rethimno"/>
+        <preferencevalue name="zoomPreference" value="15"/>
+        <preferencevalue name="radiusPreference" value="10"/>
+        <preferencevalue name="initialZoom" value="10"/>
+      </resource>
+      <resource id="38963" name="data-viewer-table" title="Data of Archaelogical places in Crete, Greece" vendor="CoNWeT" version="2.0.0">
+        <position x="0" y="10" z="3"/>
+        <rendering height="7" width="19" layout="0"/>
+        <preferencevalue name="pagination" value="0.0"/>
+        <preferencevalue name="search" value="true"/>
+      </resource>
+      <resource id="41733" name="input-box" title="Address input box" vendor="CoNWeT" version="1.0">
+        <position x="0" y="8" z="0"/>
+        <rendering height="2" width="19" layout="0"/>
+        <preferencevalue name="button_label_pref" value="Show in the map"/>
+        <preferencevalue name="input_placeholder_pref" value="Type the desired address or the coordinates (WGS84) in form &quot;Latitude,Longitude&quot;"/>
+        <preferencevalue name="input_label_pref" value="Address"/>
+      </resource>
+      <resource id="41844" name="basic-chat-timaris" title="Chat Room - Archaelogical Places in Crete" vendor="timaris" version="2.0">
+        <position x="0" y="17" z="1"/>
+        <rendering height="12" width="19" layout="0"/>
+        <preferencevalue name="gravatar" value="https://gravatar.com/timtzo"/>
+      </resource>
+    </tab>
+    <wiring version="2.0">
+      <operator id="13" name="ckan2poi_WGS84_GGRS87" vendor="timaris" version="2.0">
+        <preferencevalue name="coordinates_attr" value="Y_COORD,X_COORD"/>
+        <preferencevalue name="marker_url-type" value="internal_url"/>
+        <preferencevalue name="marker-icon" value="images/favourite icons/archaelogical1.gif"/>
+        <preferencevalue name="coordinate_system" value="GGRS87"/>
+      </operator>
+      <operator id="12" name="ckan-source" vendor="CoNWeT" version="0.4.5">
+        <preferencevalue name="resource" value="69572a1e-931d-49d9-9b44-167d8412ee3f"/>
+        <preferencevalue name="auth_token" value=""/>
+        <preferencevalue name="ckan_server" value="https://data.lab.fiware.org"/>
+        <preferencevalue name="limit_rows" value="100000"/>
+      </operator>
+      <operator id="14" name="ngsi-chat-oper_timaris" vendor="timaris" version="2.0">
+        <preferencevalue name="ngsi_server" value="http://orion.lab.fiware.org:1026/"/>
+        <preferencevalue name="ngsi_proxy" value="https://ngsiproxy.lab.fiware.org"/>
+        <preferencevalue name="chatroom" value="Chat_Room-Archaelogical_Places_Crete"/>
+      </operator>
+      <connection>
+        <source endpoint="resource" id="12" type="operator"/>
+        <target endpoint="dataset" id="38963" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="resource" id="12" type="operator"/>
+        <target endpoint="entityInput" id="13" type="operator"/>
+      </connection>
+      <connection>
+        <source endpoint="poiOutput" id="13" type="operator"/>
+        <target endpoint="poiInput" id="38964" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="outputKeyword" id="41733" type="widget"/>
+        <target endpoint="addressInput" id="38964" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="toBeReceived" id="14" type="operator"/>
+        <target endpoint="receiveMsg" id="41844" type="widget"/>
+      </connection>
+      <connection>
+        <source endpoint="sendMsg" id="41844" type="widget"/>
+        <target endpoint="toBeSent" id="14" type="operator"/>
+      </connection>
+      <visualdescription>
+        <component id="13" type="operator">
+          <position x="467" y="278"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="12" type="operator">
+          <position x="76" y="187"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="14" type="operator">
+          <position x="96" y="573"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="38964" type="widget">
+          <position x="824" y="101"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41844" type="widget">
+          <position x="103" y="401"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="38963" type="widget">
+          <position x="298" y="41"/>
+          <sources/>
+          <targets/>
+        </component>
+        <component id="41733" type="widget">
+          <position x="569" y="112"/>
+          <sources/>
+          <targets/>
+        </component>
+        <connection sourcename="operator/12/resource" targetname="widget/38963/dataset"/>
+        <connection sourcename="operator/12/resource" targetname="operator/13/entityInput"/>
+        <connection sourcename="operator/13/poiOutput" targetname="widget/38964/poiInput"/>
+        <connection sourcename="widget/41733/outputKeyword" targetname="widget/38964/addressInput"/>
+        <connection sourcename="operator/14/toBeReceived" targetname="widget/41844/receiveMsg"/>
+        <connection sourcename="widget/41844/sendMsg" targetname="operator/14/toBeSent"/>
+      </visualdescription>
+    </wiring>
+  </structure>
+  <wiring>
+    <outputendpoint name="routeDescriptionOutput" type="text" label="Route Description" description="Route description step by step. It may be connected with Route Description widget." friendcode="routeDescription"/>
+    <outputendpoint name="urlRouteMapOutput" type="text" label="URL Route Map" description="URL Route Map" friendcode="url"/>
+    <outputendpoint name="addressOutput" type="text" label="Address" description="Address of a Google Map marker." friendcode="address"/>
+    <outputendpoint name="utmCoordOutput" type="text" label="UTM Coordinates" description="UTM X, Y coordinates that is displayed in the map." friendcode="utmCoord"/>
+    <outputendpoint name="decimalCoordOutput" type="text" label="Decimal Coordinates" description="Decimal X, Y coordinates that is displayed in the map." friendcode="decimalCoord"/>
+    <outputendpoint name="poiOutput" type="text" label="PoI selected" description="A PoI has been selected on the map" friendcode="poi"/>
+    <outputendpoint name="poiListOutput" type="text" label="PoI visibility change" description="Change PoI list inside the viewport" friendcode="poiList"/>
+    <outputendpoint name="boundsOutput" type="text" label="Change Viewport" description="Change bounds of the current viewport." friendcode="viewport"/>
+    <outputendpoint name="selected-entry" type="text" label="Selected Entry" description="The object associated to the selected row"/>
+    <outputendpoint name="condition-list" type="text" label="Selected Filter" description="Conditions for filtering data using the selected id (e.g. by connecting this endpoint to the Condition List endpoint of the AND Filter operator)" friendcode="condition-list"/>
+    <outputendpoint name="outputKeyword" type="text" label="Keyword" description="This event is sent when the user press the enter key or push the send button" friendcode="keyword"/>
+    <outputendpoint name="sendMsg" type="text" label="Send a message" description="The messages sent by the user" friendcode="message"/>
+    <inputendpoint name="addressInput" type="text" label="Address" description="Address to be displayed on the map." actionlabel="Map Viewer Address" friendcode="address"/>
+    <inputendpoint name="coordsInput" type="text" label="Coordinates" description="Google Map Marker will be show in this decimal coordinates." actionlabel="Map Viewer Coordinates" friendcode="Coords"/>
+    <inputendpoint name="routeInput" type="text" label="Route" description="Google Maps route to be displayed on the map." actionlabel="Map Viewer Route" friendcode="route"/>
+    <inputendpoint name="routeStepInput" type="text" label="Route Step" description="Detailed Step of a route. It may be connected with Route Description widget." actionlabel="Map Viewer Details Steps Route" friendcode="detailStep"/>
+    <inputendpoint name="poiInput" type="text" label="Insert/Update PoI" description="Insert or update a Point of Interest." actionlabel="Map Viewer Insert/Update PoI" friendcode="poi"/>
+    <inputendpoint name="deletePoiInput" type="text" label="Delete PoI" description="Removes a point or more point of interests from the map." actionlabel="Map Viewer Delete PoI" friendcode="poi"/>
+    <inputendpoint name="poiInputCenter" type="text" label="Insert/Update Centered PoI" description="Insert or update a PoI and change the viewport centering the map on it" actionlabel="Map Viewer Centered PoI" friendcode="poi"/>
+    <inputendpoint name="selectPoiInput" type="text" label="Select PoI" description="Select a PoI and change the viewport centering the map on it" actionlabel="Map Viewer Select PoI" friendcode="poi"/>
+    <inputendpoint name="dataset" type="text" label="Data and Structure" description="A JSON or an object with two fields: structure (for the structure of the data) and data (the data ifself)" actionlabel="Data and Structure" friendcode="dataset"/>
+    <inputendpoint name="receiveMsg" type="text" label="Receive a message" description="Messages sent by other widgets can be received" friendcode="message"/>
+  </wiring>
+</mashup>
